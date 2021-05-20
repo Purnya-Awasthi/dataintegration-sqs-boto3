@@ -10,8 +10,8 @@ import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 try:
    #connecting to boto3
-   sqs = boto3.resource('sqs',aws_access_key_id =  'ldsjhfljwe87327tr623415235',
-                        aws_secret_access_key = '4871308560143874965')
+   sqs = boto3.resource('sqs',aws_access_key_id =  '',
+                        aws_secret_access_key = '')
    print(sqs)
 
    queue = sqs.create_queue(QueueName='pwtc-datastream2', Attributes={'DelaySeconds': '5'})
